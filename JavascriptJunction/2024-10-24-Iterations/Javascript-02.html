@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Form Processing</title>
+<script> 
+// Declarations
+var mystr = "";
+var hw = "";
+        
+/* 
+    * White space matters betwee the script tags
+    * Flush left within the tags (line 15 and line 17)
+*/
+        
+function testMe(frm) { 
+    var myname = frm.user_name.value;
+    var mymail = frm.user_email.value;
+    var mymsg = frm.user_message.value;
+    
+    document.getElementById("formresults").innerHTML = "Name " + myname + "Email: " + mymail + " Message: " + mymsg;
+    
+}
+    </script>
+    </head>
+    <body>
+
+<form method="GET">
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
+  <p>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" />
+  </p>
+  <p>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </p>
+  <p>
+    <input type="button" name="CoolButton" value="ClickMe" onclick="testMe(this.form);"> 
+  </p>
+</form>
+<div class="results" id="formresults"> 
+</div>
+    </body>
+</html>

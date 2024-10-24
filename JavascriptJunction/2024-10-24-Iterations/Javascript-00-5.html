@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Variables</title>
+<script>
+// from https://sentry.io/answers/difference-between-let-and-var-in-javascript/
+function varScoping() {
+  var a = 1;
+
+  if (true) {
+    var a = 2;
+    console.log("In function-if - var:  " + a); // will print 2
+  }
+
+  console.log("Out of function-if - var:  " + a); // will print 2
+}
+
+function letScoping() {
+  let x = 1;
+
+  if (true) {
+    let x = 2;
+    console.log("In function-if - let:  " + x); // will print 2
+  }
+
+  console.log("Out of function-if - out:  " + x); // will print 1
+}
+
+</script>
+</head>
+    <body>
+    <form name="vartesting"> 
+      <input type="button" name="varbutton" value="Var Stmt" onclick="varScoping();"/> 
+      <input type="button" name="letbutton" value="Let Stmt" onclick="letScoping();"/> 
+    </form>
+    </body>
+</html>

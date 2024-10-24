@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Form Processing</title>
+<script> 
+// Declarations
+var mystr = "";
+var hw = "";
+var myname = "";
+var a = "";
+var b = "";
+var hyp = "";
+        
+/* 
+    * White space matters betwee the script tags
+    * Flush left within the tags (line 15 and line 17)
+*/
+  
+
+// Functions
+function testMe(frm) { 
+    myname = frm.user_name.value;
+    a = frm.lenA.value;
+    b = frm.lenB.value;  
+    hyp = Math.sqrt(a^2 + b^2)
+    document.getElementById("formresults").innerHTML = "Project Name " + myname + "<p>Length C: " + hyp + "</p>";
+    
+}
+    </script>
+    </head>
+    <body>
+
+<form method="GET">
+  <p>
+    <label for="name">Project Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
+  <p>
+    <label for="lenA">Length A:</label>
+    <input type="text" id="lenA" name="lenA" />
+  </p>
+  <p>
+    <label for="lenB">Length B:</label>
+    <input type="text" id="lenB" name="lenB" />
+  </p>
+  <p>
+    <input type="button" name="CoolButton" value="ClickMe" onclick="testMe(this.form);"> 
+  </p>
+</form>
+<div class="results" id="formresults"> 
+</div>
+    </body>
+</html>
