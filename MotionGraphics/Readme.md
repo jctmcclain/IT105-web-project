@@ -1,4 +1,3 @@
 # Motion Graphics 
 
-## JavaScript Animations 
-
+[OBS - LowerThirds](https://obs.infor-r.com/#customize)
