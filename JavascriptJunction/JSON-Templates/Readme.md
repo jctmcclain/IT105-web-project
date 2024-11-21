@@ -3,7 +3,7 @@
 ## Inline 
 
 ## Remote
-```javascript
+``` JAVASCRIPT
 <div id="recordset"></div>
 <hr>
 </div>
