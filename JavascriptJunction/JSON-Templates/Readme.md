@@ -31,7 +31,6 @@ document.getElementById("recordset").innerHTML = rs;
 ``` JAVASCRIPT
 <div id="recordset"></div>
 <hr>
-</div>
 <script>
 function fetchJSONData() {
 	fetch("./mycool.json").then((res) => {
