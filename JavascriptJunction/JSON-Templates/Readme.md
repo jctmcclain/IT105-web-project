@@ -1,6 +1,31 @@
 # JSON Templates
 
 ## Inline 
+```JAVASCRIPT
+<script>
+data = '[';
+data += '{"attribone":"Item One 1","attribtwo":"Item Two 1","attribthree":"Item Three 1"},'
+data += '{"attribone":"Item One 2","attribtwo":"Item Two 2","attribthree":"Item Three 2"}'
+data += ']';
+
+var mydata = JSON.parse(data);
+rs = '<div class="row">';
+rs += '   <div class="col-md-4"><b>Attribute One</b></div>';
+rs += '   <div class="col-md-4"><b>Attribute Two</b></div>';
+rs += '   <div class="col-md-4"><b>Attribute Three</b></div>';
+rs += '</div>';
+for(i=0;i<mydata.length;i++) {
+	rs += '<div class="row">';
+	rs += '   <div class="col-md-4">' + mydata[i].attribone + '</div>';
+	rs += '   <div class="col-md-4">' + mydata[i].attribtwo + '</div>';
+	rs += '   <div class="col-md-4">' + mydata[i].attribthree + '</div>';
+	rs += '</div>';
+} 
+document.getElementById("recordset").innerHTML = rs;
+</script>
+
+
+```
 
 ## Remote
 ``` JAVASCRIPT
