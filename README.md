@@ -1,2 +1,6 @@
-# IT105-web-project
-Caffeinated Climbing Project 
+# IT105 Web Project 
+* JavaScript Tips
+* Motion Animations
+* Sample Github Pages
+
+### Status: Half-baked
